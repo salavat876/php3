@@ -39,6 +39,12 @@ $arrNut = array(
   "walnut" =>9,
   "meg" =>10
 );
+
+function createList ($arr) {
+    foreach ($arr as $key => $value){
+        echo '<li class="list_item">'.$key . ':'.$value.'<li>';
+    }
+}
 ?>
 
 <!Doctype html>
@@ -54,21 +60,16 @@ $arrNut = array(
 <body>
 <div class="flex-block">
     <ul class="listColor">
-        <?php foreach ($arrColor as $key => $value) {
-            echo '<li class="list_item">'.$key . ':'.$value.'<li>';
-        } ?>
+        <?php createList($arrColor); ?>
     </ul>
 
     <ul class="listVeget">
-        <?php foreach ($arrVeget as $key => $value) {
-            echo '<li class="list_item">'.$key . ':'.$value.'<li>';
-        } ?>
+        <?php
+        createList($arrNut);?>
     </ul>
 
     <ul class="listNut">
-        <?php foreach ($arrNut as $key => $value) {
-            echo '<li class="list_item">'.$key . ':'.$value.'<li>';
-        } ?>
+        <?php createList($arrVeget); ?>
     </ul>
 
 
